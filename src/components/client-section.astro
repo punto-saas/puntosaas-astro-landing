@@ -1,0 +1,42 @@
+---
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+<section class="py-16 mb-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- Left: Text content -->
+    <div>
+      <h2 class="text-4xl font-bold mb-4">¿Para quién es esto?</h2>
+      <p class="text-lg mb-8 text-gray-800">
+        PuntoSaaS conecta startups B2B SaaS peruanas y extranjeras con decision-makers de empresas medianas y grandes. Acelera tus ventas a través de reuniones directas y efectivas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-8 mb-8">
+        <div class="flex-1">
+          <Icon name="bx:cube" class="w-8 h-8 mb-2 text-black" />
+          <h3 class="font-bold text-lg mb-1">Startups Peruanas</h3>
+          <p class="text-sm text-gray-700">Ideal para fundadores activos buscando abrir ventas con empresas grandes.</p>
+        </div>
+        <div class="flex-1">
+          <Icon name="bx:cube" class="w-8 h-8 mb-2 text-black" />
+          <h3 class="font-bold text-lg mb-1">Startups Extranjeras</h3>
+          <p class="text-sm text-gray-700">Listas para operar en Perú y buscar clientes ancla.</p>
+        </div>
+      </div>
+      <div class="inline-block mt-4">
+        <Link
+          href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+          target="_blank"
+          class="inline-flex gap-1 items-center justify-center px-8 py-3 bg-black text-white text-lg font-semibold rounded shadow hover:bg-gray-900 transition"
+          rel="noopener"
+        >
+          <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+          Aplicar
+        </Link>
+      </div>
+    </div>
+    <!-- Right: Placeholder image -->
+    <div class="w-full h-80 bg-gray-300 flex items-center justify-center">
+      <Icon name="bx:image" class="w-20 h-20 text-gray-400" />
+    </div>
+  </div>
+</section>
