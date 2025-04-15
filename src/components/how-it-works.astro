@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+import Link from "@/components/ui/link.astro";
+---
+<section class="py-16 mb-16 bg-white mt-28">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-4">Así es como funciona PuntoSaaS</h2>
+    <p class="text-lg text-center mb-12 text-gray-700 max-w-2xl mx-auto">
+      PuntoSaaS conecta a startups con tomadores de decisiones. A través de reuniones directas, facilitamos el crecimiento y la reducción de costos de adquisición.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
+      <div class="flex flex-col items-center text-center">
+        <Icon name="bx:cube" class="w-12 h-12 mb-4 text-black" />
+        <h3 class="text-xl font-bold mb-2">Paso 1: Postula con tu startup</h3>
+        <p class="text-base text-gray-700">Completa el formulario de solicitud en nuestra página. Queremos conocerte. Solo toma 2 minutos.</p>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <Icon name="bx:cube" class="w-12 h-12 mb-4 text-black" />
+        <h3 class="text-xl font-bold mb-2">Paso 2: Curamos la experiencia contigo</h3>
+        <p class="text-base text-gray-700">Si hay fit con nuestra propuesta y el perfil que buscas es viable, coordinamos una breve call de alineación para aterrizar tu ICP, definir la fecha y planificar el desayuno.</p>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <Icon name="bx:cube" class="w-12 h-12 mb-4 text-black" />
+        <h3 class="text-xl font-bold mb-2">Paso 3: Participa y acelera tu crecimiento</h3>
+        <p class="text-base text-gray-700">Conversa con decision-makers, establece relaciones de confianza y genera oportunidades concretas de negocio.</p>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <Link
+        href="#"
+        class="flex gap-1 items-center justify-center border border-black px-4 py-2 text-black text-base font-medium rounded hover:bg-black hover:text-white transition"
+        rel="noopener"
+      >
+        Aplicar
+      </Link>
+    </div>
+  </div>
+</section>
