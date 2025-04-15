@@ -1,12 +1,27 @@
 ---
-const { align = "center" } = Astro.props;
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
 ---
+<section class="py-16 mb-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="md:w-1/2 text-left">
+      <h2 class="text-4xl font-bold mb-4">¿Qué es PuntoSaaS?</h2>
+    </div>
+    <div class="md:w-1/2 text-left flex flex-col items-start">
+      <p class="text-lg mb-6 text-gray-800">
+        PuntoSaaS organiza desayunos curados entre startups B2B SaaS y ejecutivos clave de empresas medianas y grandes.<br />
+        Descubre los pains reales de tu ICP, valida tu propuesta de valor y acelera tus oportunidades comerciales sin perder tiempo con puertas cerradas.
+      </p>
+      <Link
+      href="#"
+      href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+      target="_blank"
+      class="flex gap-1 items-center justify-center"
+      rel="noopener">
+      <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
 
-<div class:list={["mt-16", align === "center" && "text-center"]}>
-  <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    <slot name="title">Title</slot>
-  </h1>
-  <p class="text-lg mt-4 text-slate-600">
-    <slot name="desc">Some description goes here</slot>
-  </p>
-</div>
+      Aplicar
+    </Link>
+    </div>
+  </div>
+</section>
