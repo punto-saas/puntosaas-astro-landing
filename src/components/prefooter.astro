@@ -1,0 +1,50 @@
+---
+// No props needed
+---
+<section class="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen bg-white py-14 px-4 mt-16">
+  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-12">
+    <!-- Left: Brand and description -->
+    <div class="md:w-1/3 flex flex-col gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl text-[var(--color-primary)]">Punto</span><span class="font-bold text-xl text-[var(--color-text)]">SaaS</span>
+        <span class="bg-gray-200 text-xs font-semibold rounded px-2 py-0.5 ml-2">PRO</span>
+      </div>
+      <p class="text-[var(--color-text)]/70 text-sm">PuntoSaaS conecta tu startup SaaS B2B con decisores y clientes ideales. Construido con Astro y Tailwind CSS.</p>
+      <div class="flex gap-3 mt-2">
+        <a href="#" class="hover:text-[var(--color-primary)]" aria-label="Twitter"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016 2a4.48 4.48 0 00-4.47 4.48c0 .35.04.7.11 1.03C7.69 7.36 4.07 5.7 1.64 2.96c-.38.65-.6 1.4-.6 2.2a4.48 4.48 0 001.98 3.73A4.52 4.52 0 012 7.13v.06A4.48 4.48 0 004.48 12c-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08a4.48 4.48 0 004.19 3.13A9 9 0 013 19.54 12.8 12.8 0 0012 22c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0023 3z"/></svg></a>
+        <a href="#" class="hover:text-[var(--color-primary)]" aria-label="GitHub"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.13-1.1-1.43-1.1-1.43-.9-.62.07-.61.07-.61 1 .07 1.53 1.02 1.53 1.02.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.85c.85.004 1.7.11 2.5.32 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg></a>
+        <a href="#" class="hover:text-[var(--color-primary)]" aria-label="LinkedIn"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect width="4" height="12" x="2" y="9" rx="2"/></svg></a>
+      </div>
+    </div>
+    <!-- Right: Link columns -->
+    <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-semibold mb-3 text-[var(--color-text)]">Company</h4>
+        <ul class="space-y-2 text-[var(--color-text)]/80 text-sm">
+          <li><a href="#" class="hover:text-[var(--color-primary)]">About</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Careers</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Blog</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-[var(--color-text)]">Product</h4>
+        <ul class="space-y-2 text-[var(--color-text)]/80 text-sm">
+          <li><a href="#" class="hover:text-[var(--color-primary)]">For Startups</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Features</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Pricing</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Integrations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-[var(--color-text)]">Resources</h4>
+        <ul class="space-y-2 text-[var(--color-text)]/80 text-sm">
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Help Center</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Guides</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Documentation</a></li>
+          <li><a href="#" class="hover:text-[var(--color-primary)]">Uptime Status</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
