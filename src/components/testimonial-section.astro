@@ -1,0 +1,63 @@
+---
+const testimonials = [
+  {
+    name: "José Tomás Lobo",
+    title: "CRO & Co-Founder, Shinkanzen",
+    company: "Webflow",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    rating: 5,
+    text: "PuntoSaaS nos conectó con líderes que realmente escuchan. Las reuniones fueron clave para nuestro crecimiento.",
+  },
+  {
+    name: "David Tafur",
+    title: "CEO & Co-Founder, YaVendió",
+    company: "Webflow",
+    avatar: "https://randomuser.me/api/portraits/men/33.jpg",
+    rating: 5,
+    text: "Las conexiones que hicimos fueron invaluables. Sin duda, volveremos a participar.",
+  },
+  // Puedes agregar más testimonios aquí
+];
+---
+<section class="py-16 bg-white mt-28">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-2">Testimonios de clientes</h2>
+    <p class="text-lg mb-10 text-gray-700">La experiencia resultó ser un cambio radical para nuestros clientes.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      {testimonials.map((t, idx) => (
+        <div class="border rounded-lg p-8 bg-white flex flex-col justify-between h-full">
+          <div class="mb-4">
+            <div class="flex items-center mb-2">
+              {[...Array(t.rating)].map(() => (
+                <svg class="w-6 h-6 text-black fill-current" viewBox="0 0 20 20"><polygon points="10,1 12.59,6.98 19,7.64 14,12.26 15.18,18.02 10,15 4.82,18.02 6,12.26 1,7.64 7.41,6.98"/></svg>
+              ))}
+            </div>
+            <blockquote class="font-semibold text-lg mb-4">“{t.text}”</blockquote>
+          </div>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src={t.avatar} alt={t.name} class="w-10 h-10 rounded-full bg-gray-200 object-cover" />
+            <div>
+              <div class="font-semibold text-gray-800">{t.name}</div>
+              <div class="text-sm text-gray-500">{t.title}</div>
+            </div>
+            <div class="ml-auto flex items-center gap-2">
+              <img src="/webflow-logo.svg" alt="Webflow" class="h-6" />
+              <span class="text-gray-600 font-medium">{t.company}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="flex justify-between items-center mt-4">
+      <div class="flex gap-2">
+        <span class="w-3 h-3 rounded-full bg-gray-400 inline-block"></span>
+        <span class="w-3 h-3 rounded-full bg-gray-200 inline-block"></span>
+        <span class="w-3 h-3 rounded-full bg-gray-200 inline-block"></span>
+      </div>
+      <div class="flex gap-2">
+        <button class="border rounded-full w-10 h-10 flex items-center justify-center text-xl text-black hover:bg-gray-100 transition">←</button>
+        <button class="border rounded-full w-10 h-10 flex items-center justify-center text-xl text-black hover:bg-gray-100 transition">→</button>
+      </div>
+    </div>
+  </div>
+</section>
