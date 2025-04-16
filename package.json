@@ -4,6 +4,7 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -33,6 +34,7 @@
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "prettier": "^3.5.3"
   }
 }
