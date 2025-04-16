@@ -8,7 +8,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site: "https://punto-saas.github.io/puntosaas-astro-landing/", // Update to your GitHub Pages URL
+  base: "/puntosaas-astro-landing/", // Set base path for GitHub Pages
   integrations: [mdx(), sitemap(), icon(), react()],
   vite: {
     plugins: [tailwindcss()],
