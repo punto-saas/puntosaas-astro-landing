@@ -2,24 +2,24 @@
 import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
-<section id="que-es-puntosaas" class="py-16 mb-16 bg-white">
-  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
-    <div class="md:w-1/2 text-left">
-      <h2 class="text-4xl font-bold mb-4">¿Qué es PuntoSaaS?</h2>
-    </div>
-    <div class="md:w-1/2 text-left flex flex-col items-start">
-      <p class="text-lg mb-6 text-gray-800">
-        PuntoSaaS organiza desayunos curados entre startups B2B SaaS y ejecutivos clave de empresas medianas y grandes.<br />
-        Descubre los pains reales de tu ICP, valida tu propuesta de valor y acelera tus oportunidades comerciales sin perder tiempo con puertas cerradas.
-      </p>
-      <Link
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-        Aplicar
-      </Link>
-    </div>
+<section id="que-es-puntosaas" class="py-20 fadein-section bg-white">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <div class="text-left">
+    <h2 class="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-4">¿Qué es PuntoSaaS?</h2>
   </div>
+  <div class="text-left flex flex-col items-start">
+    <p class="text-lg text-[var(--color-text)]/80 mb-6">
+      PuntoSaaS organiza desayunos curados entre startups B2B SaaS y ejecutivos clave de empresas medianas y grandes.<br />
+      Descubre los pains reales de tu ICP, valida tu propuesta de valor y acelera tus oportunidades comerciales sin perder tiempo con puertas cerradas.
+    </p>
+    <Link
+      href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+      target="_blank"
+      class="flex gap-1 items-center justify-center bg-[var(--color-primary)] text-white px-5 py-2 rounded font-semibold hover:bg-[var(--color-primary-dark)] transition"
+      rel="noopener">
+      <Icon class="text-white w-5 h-5" name="bx:send" />
+      Aplicar
+    </Link>
+  </div>
+</div>
 </section>
