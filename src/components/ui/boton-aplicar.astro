@@ -17,12 +17,12 @@ const finalHref = isContactar ? 'mailto:info@puntosaas.com' : href;
     href={finalHref}
     role="button"
     tabindex="0"
-    class={className}
+    class={[`group inline-flex items-center gap-2 font-semibold rounded-sm text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-[var(--color-accent)] border-2 border-[var(--color-accent)] text-white hover:bg-white hover:text-[var(--color-text)]`, className].join(' ')}
     onclick="event.preventDefault(); window.dispatchEvent(new CustomEvent('openPuntoSaasForm'));"
     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.dispatchEvent(new CustomEvent('openPuntoSaasForm'));}"
     {...rest}
   >
-    <Icon name="bx:send" class="text-[var(--color-accent)]" />
+    <Icon name="bx:send" class="text-white group-hover:text-[var(--color-text)] transition-colors" />
     {children}
   </a>
 ) : (
