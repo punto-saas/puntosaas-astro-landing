@@ -7,25 +7,25 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 const menuitems = [
   {
     title: "Inicio",
-    path: "/",
+    path: "#hero",
   },
   {
     title: "Sobre Nosotros",
-    path: "#sobre-nosotros",
+    path: "#que-es-puntosaas",
   },
   {
     title: "Servicios",
-    path: "#servicios",
+    path: "#how-it-works",
   },
   {
     title: "Testimoniales",
-    path: "#testimoniales",
+    path: "#testimonios",
   },
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="sticky top-0 z-50 bg-white shadow-sm flex flex-col lg:flex-row justify-between items-center py-3 transition-all duration-300">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
