@@ -4,6 +4,7 @@ import heroImage from "@/assets/hero.png";
 import Link from "@/components/ui/link.astro";
 import BotonAplicar from "@/components/ui/boton-aplicar.astro";
 import { Icon } from "astro-icon/components";
+import Image from "@/components/ui/Image.astro";
 ---
 
 <main id="hero"
@@ -12,7 +13,7 @@ import { Icon } from "astro-icon/components";
   <!-- Collage de fotos reales de eventos -->
   <div class="relative flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 fadein-collage">
     <!-- Imagen secundaria izquierda -->
-    <img
+    <Image
       src={`${import.meta.env.BASE_URL}punto-saas-3-meetup.jpeg`}
       alt="Evento Punto SaaS 3"
       class="w-28 h-28 md:w-40 md:h-40 object-cover shadow-lg collage-img-secondary"
@@ -21,7 +22,7 @@ import { Icon } from "astro-icon/components";
     />
     <!-- Imagen principal -->
     <div class="relative">
-      <img
+      <Image
         src={`${import.meta.env.BASE_URL}punto-saas-2-meetup.jpeg`}
         alt="Evento Punto SaaS 2 (principal)"
         class="w-44 h-44 md:w-64 md:h-64 object-cover shadow-2xl collage-img-main"
@@ -35,7 +36,7 @@ import { Icon } from "astro-icon/components";
       </div>
     </div>
     <!-- Imagen secundaria derecha -->
-    <img
+    <Image
       src={`${import.meta.env.BASE_URL}punto-saas-1-meetup.jpeg`}
       alt="Evento Punto SaaS 1"
       class="w-28 h-28 md:w-40 md:h-40 object-cover shadow-lg collage-img-secondary"
