@@ -7,6 +7,7 @@ const supabase = createClient(
 );
 
 export const POST: APIRoute = async ({ request }) => {
+  console.log("API apply.ts called");
   try {
     const data = await request.json();
     // Map frontend keys to DB columns
@@ -27,10 +28,12 @@ export const POST: APIRoute = async ({ request }) => {
     };
     const { error } = await supabase.from("puntosaas_applications").insert([insertData]);
     if (error) {
-      return new Response(JSON.stringify({ message: error.message }), { status: 500 });
+      console.error('Supabase error:', error); // <-- LOG SUPABASE ERROR
+      return new Response(JSON.stringify({ message: error.message, details: error.details, hint: error.hint, code: error.code }), { status: 500 });
     }
     return new Response(JSON.stringify({ message: "¡Aplicación recibida!" }), { status: 200 });
   } catch (e) {
-    return new Response(JSON.stringify({ message: "Error procesando la solicitud" }), { status: 400 });
+    console.error('Catch error:', e); // <-- LOG CATCH ERROR
+    return new Response(JSON.stringify({ message: "Error procesando la solicitud", error: String(e) }), { status: 400 });
   }
 };
