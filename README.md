@@ -1,3 +1,50 @@
+# PuntoSaaS Landing Page
+
+This project is a customized landing page for PuntoSaaS, built using [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/), based on the Astroship starter template. It features:
+- Organized image management (`/images/hero`, `/images/team`, `/images/testimonials`)
+- All project colors managed via CSS variables (see `/src/styles/colors.css`)
+- Local image usage for reliability and performance
+- Custom testimonial, team, and hero sections
+
+---
+
+## Project Structure
+
+```
+public/
+  images/
+    hero/           # Hero section images
+    team/           # Team member profile images
+    testimonials/   # Testimonial avatars
+src/
+  components/       # Astro components (hero, team, testimonials, etc.)
+  styles/colors.css # Project color variables
+```
+
+## Color & Style Guide
+- **All project colors** must be used via CSS variables defined in `src/styles/colors.css`.
+- Use Tailwind's arbitrary value syntax (e.g., `text-[var(--color-primary)]`).
+- Do **not** use Tailwind's default color palette for project-specific colors.
+
+## Local Images
+- **All avatars and hero images are stored locally** for speed and reliability.
+- To update an image, replace the file in the appropriate folder and ensure the import path uses:
+  ```js
+  `${import.meta.env.BASE_URL}images/<folder>/<filename>`
+  ```
+
+## Running Locally
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
 # Astroship - Astro SAAS Starter Website Template
 
 Astroship is a free starter astro website template for saas, startups, marketing websites, landing pages & blogs. Built with Astro & TailwindCSS.
