@@ -3,8 +3,9 @@ const testimonials = [
   {
     name: "José Tomás Lobo",
     title: "CRO & Co-Founder, Shinkanzen",
-    company: "Webflow",
+    company: "Shinkansen",
     avatar: `${import.meta.env.BASE_URL}images/testimonials/jose-tomas-lobo.jpg`,
+    logo: `${import.meta.env.BASE_URL}images/logos/shinkansen.png`,
     rating: 5,
     text: "PuntoSaaS nos conectó con líderes que realmente escuchan. Las reuniones fueron clave para nuestro crecimiento.",
   },
@@ -13,6 +14,7 @@ const testimonials = [
     title: "CEO & Co-Founder, YaVendió",
     company: "Webflow",
     avatar: `${import.meta.env.BASE_URL}images/testimonials/david-tafur.jpg`,
+    logo: `/webflow-logo.svg`,
     rating: 5,
     text: "Las conexiones que hicimos fueron invaluables. Sin duda, volveremos a participar.",
   },
@@ -21,6 +23,7 @@ const testimonials = [
     title: "COO & Co-Founder, FintechNow",
     company: "Webflow",
     avatar: `${import.meta.env.BASE_URL}images/testimonials/valeria-gomez.jpg`,
+    logo: `/webflow-logo.svg`,
     rating: 5,
     text: "Gracias a PuntoSaaS logramos validar nuestra propuesta en tiempo récord y con feedback de altísimo valor.",
   },
@@ -29,6 +32,7 @@ const testimonials = [
     title: "Head of Growth, SaaSify",
     company: "Webflow",
     avatar: `${import.meta.env.BASE_URL}images/testimonials/martin-perez.jpg`,
+    logo: `/webflow-logo.svg`,
     rating: 5,
     text: "El formato de las reuniones fue directo y efectivo. Conseguimos leads calificados desde el primer encuentro.",
   },
@@ -76,13 +80,13 @@ const testimonials = [
                 <div class="font-semibold text-[var(--color-text)]">{t.name}</div>
                 <div class="text-sm text-[var(--color-text)]/60">{t.title}</div>
               </div>
-              <div class="ml-auto flex items-center gap-2">
-                <img src="/webflow-logo.svg" alt="Webflow" class="h-6" />
-                <span class="text-[var(--color-text)]/60 font-medium">{t.company}</span>
+              <div class="ml-auto flex items-center">
+                <img src={t.logo} alt={t.company} class="h-10 w-auto" />
               </div>
             </div>
           </div>
         ))}
+      </div>
     </div>
   </div>
   <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen overflow-hidden leading-none rotate-180" aria-hidden="true">
