@@ -1,5 +1,6 @@
 ---
 import Link from "@/components/ui/link.astro";
+import BotonAplicar from "@/components/ui/boton-aplicar.astro";
 import { Icon } from "astro-icon/components";
 ---
 <section class="py-20 fadein-section bg-white">
@@ -23,14 +24,7 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
       <div class="inline-block mt-4">
-        <Link
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center bg-[var(--color-accent)] text-white px-5 py-2 rounded font-semibold hover:bg-[var(--color-accent-dark)] transition"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:send" />
-        Aplicar
-      </Link>
+        <BotonAplicar href="https://web3templates.com/templates/astroship-starter-website-template-for-astro" target="_blank" rel="noopener" />
       </div>
     </div>
     <!-- Right: Placeholder image -->

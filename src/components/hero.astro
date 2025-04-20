@@ -2,6 +2,7 @@
 import { Picture } from "astro:assets";
 import heroImage from "@/assets/hero.png";
 import Link from "@/components/ui/link.astro";
+import BotonAplicar from "@/components/ui/boton-aplicar.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -72,16 +73,7 @@ import { Icon } from "astro-icon/components";
       Impulsa las ventas de tu startup B2B SaaS reduciendo tu CAC. Participa en desayunos curados que te conectan directamente con empresas medianas y grandes listas para comprar.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center bg-[var(--color-accent)] text-white px-5 py-2 rounded font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-[var(--color-accent-dark)]"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:send" />
-
-        Aplicar
-      </Link>
+      <BotonAplicar href="https://web3templates.com/templates/astroship-starter-website-template-for-astro" target="_blank" rel="noopener" />
       <Link
         size="lg"
         style="outline"

@@ -1,0 +1,33 @@
+---
+interface Props {
+  href?: string;
+  target?: string;
+  rel?: string;
+  class?: string;
+  children?: any;
+}
+
+import { Icon } from "astro-icon/components";
+const {
+  href = "#",
+  target = undefined,
+  rel = undefined,
+  class: className = "",
+  children = "Aplicar",
+  ...rest
+} = Astro.props;
+---
+
+<a
+  href={href}
+  target={target}
+  rel={rel}
+  {...rest}
+  class:list={[
+    "flex gap-1 items-center justify-center bg-[var(--color-accent)] text-white px-5 py-2 rounded font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-[var(--color-accent-dark)]",
+    className,
+  ]}
+>
+  <Icon class="text-white w-5 h-5" name="bx:send" />
+  {children}
+</a>

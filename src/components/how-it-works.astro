@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import Link from "@/components/ui/link.astro";
+import BotonAplicar from "@/components/ui/boton-aplicar.astro";
 ---
 <section id="how-it-works" class="py-20 fadein-section bg-white mt-28">
   <div class="max-w-6xl mx-auto px-4">
@@ -26,14 +27,7 @@ import Link from "@/components/ui/link.astro";
       </div>
     </div>
     <div class="flex justify-center">
-      <Link
-        href="#"
-        class="flex gap-1 items-center justify-center bg-[var(--color-accent)] text-white px-5 py-2 rounded font-semibold hover:bg-[var(--color-accent-dark)] transition"
-        rel="noopener"
-      >
-        <Icon class="text-white w-5 h-5" name="bx:send" />
-        Aplicar
-      </Link>
+      <BotonAplicar href="#" rel="noopener" />
     </div>
   </div>
 </section>
