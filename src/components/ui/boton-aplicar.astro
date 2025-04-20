@@ -24,10 +24,10 @@ const {
   rel={rel}
   {...rest}
   class:list={[
-    "flex gap-1 items-center justify-center bg-[var(--color-accent)] text-white px-5 py-2 rounded font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-[var(--color-accent-dark)]",
+    "group flex gap-1 items-center justify-center bg-[var(--color-accent)] text-white px-5 py-2 rounded font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-white hover:text-black hover:border hover:border-black",
     className,
   ]}
 >
-  <Icon class="text-white w-5 h-5" name="bx:send" />
+  <Icon class="text-white group-hover:text-black w-5 h-5" name="bx:send" />
   {children}
 </a>
