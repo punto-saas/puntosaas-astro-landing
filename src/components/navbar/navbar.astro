@@ -24,9 +24,10 @@ const menuitems = [
 ];
 ---
 
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
-    <Astronav>
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <Container>
+    <div class="flex flex-col lg:flex-row justify-between items-center py-3 transition-all duration-300">
+      <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
           ><span class="font-bold text-[var(--color-primary)]">Punto</span><span
@@ -51,11 +52,12 @@ const menuitems = [
           ))}
         </ul>
       </MenuItems>
-    </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <Link href="#" size="md">Aplicar</Link>
+      </Astronav>
+      <div>
+        <div class="hidden lg:flex items-center gap-4">
+          <Link href="#" size="md">Aplicar</Link>
+        </div>
       </div>
     </div>
-  </header>
-</Container>
+  </Container>
+</header>
