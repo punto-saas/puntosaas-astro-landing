@@ -14,9 +14,11 @@ import ClientSection from "@/components/client-section.astro";
 import Layout from "@/layouts/Layout.astro";
 import Footer from "@/components/footer.astro";
 import BackToTop from "@/components/ui/back-to-top.astro";
+import PuntoSaasFormModal from "@/components/PuntoSaasFormModal.jsx";
 ---
 
 <Layout title="">
+  <PuntoSaasFormModal client:only="react" />
   <Container>
     <Hero />
     <About />

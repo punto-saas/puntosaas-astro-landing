@@ -1,13 +1,5 @@
 ---
-interface Props {
-  href?: string;
-  target?: string;
-  rel?: string;
-  class?: string;
-  children?: any;
-}
-
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components';
 const {
   href = "#",
   target = undefined,
@@ -16,20 +8,32 @@ const {
   children = "Aplicar",
   ...rest
 } = Astro.props;
+const isAplicar = typeof children === 'string' && children.toLowerCase().includes('aplicar');
+const isContactar = typeof children === 'string' && children.toLowerCase().includes('contactar');
+const finalHref = isContactar ? 'mailto:info@puntosaas.com' : href;
 ---
-
-<a
-  href={(typeof children === 'string' && children.toLowerCase().includes('contactar'))
-    ? 'mailto:hola@puntosaas.com?subject=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20PuntoSaaS'
-    : (href || '#')}
-  target={target}
-  rel={rel}
-  {...rest}
-  class:list={[
-    "group flex gap-1 items-center justify-center bg-[var(--color-accent)] text-white px-5 py-2 rounded font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-white hover:text-black hover:border hover:border-black",
-    className,
-  ]}
->
-  <Icon class="text-white group-hover:text-black w-5 h-5" name="bx:send" />
-  {children}
-</a>
+{isAplicar ? (
+  <a
+    href={finalHref}
+    role="button"
+    tabindex="0"
+    class={className}
+    onclick="event.preventDefault(); window.dispatchEvent(new CustomEvent('openPuntoSaasForm'));"
+    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.dispatchEvent(new CustomEvent('openPuntoSaasForm'));}"
+    {...rest}
+  >
+    <Icon name="bx:send" class="text-[var(--color-accent)]" />
+    {children}
+  </a>
+) : (
+  <a
+    href={finalHref}
+    target={target}
+    rel={rel}
+    class={className}
+    {...rest}
+  >
+    <Icon name="bx:send" class="text-[var(--color-accent)]" />
+    {children}
+  </a>
+)}
