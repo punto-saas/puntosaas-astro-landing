@@ -19,7 +19,9 @@ const {
 ---
 
 <a
-  href={href}
+  href={(typeof children === 'string' && children.toLowerCase().includes('contactar'))
+    ? 'mailto:hola@puntosaas.com?subject=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20PuntoSaaS'
+    : (href || '#')}
   target={target}
   rel={rel}
   {...rest}
