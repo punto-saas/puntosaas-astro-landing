@@ -2,10 +2,10 @@
 import { Icon } from "astro-icon/components";
 import Link from "@/components/ui/link.astro";
 ---
-<section class="py-16 mb-16 bg-white mt-28">
+<section class="py-20 fadein-section bg-white mt-28">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-4">Así es como funciona PuntoSaaS</h2>
-    <p class="text-lg text-center mb-12 text-gray-700 max-w-2xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-[var(--color-text)] mb-4">Así es como funciona PuntoSaaS</h2>
+    <p class="text-lg text-center mb-12 text-[var(--color-text)]/80 max-w-2xl mx-auto">
       PuntoSaaS conecta a startups con tomadores de decisiones. A través de reuniones directas, facilitamos el crecimiento y la reducción de costos de adquisición.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
@@ -28,9 +28,10 @@ import Link from "@/components/ui/link.astro";
     <div class="flex justify-center">
       <Link
         href="#"
-        class="flex gap-1 items-center justify-center border border-black px-4 py-2 text-black text-base font-medium rounded hover:bg-black hover:text-white transition"
+        class="flex gap-1 items-center justify-center bg-[var(--color-primary)] text-white px-5 py-2 rounded font-semibold hover:bg-[var(--color-primary-dark)] transition"
         rel="noopener"
       >
+        <Icon class="text-white w-5 h-5" name="bx:send" />
         Aplicar
       </Link>
     </div>
