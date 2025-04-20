@@ -81,7 +81,9 @@ const testimonials = [
                 <div class="text-sm text-[var(--color-text)]/60">{t.title}</div>
               </div>
               <div class="ml-auto flex items-center">
-                <img src={t.logo} alt={t.company} class="h-10 w-auto" />
+                <div class="h-10 w-24 md:h-12 md:w-32 flex items-center justify-center bg-transparent">
+  <img src={t.logo} alt={t.company} class="h-full w-auto object-contain max-w-full" />
+</div>
               </div>
             </div>
           </div>
