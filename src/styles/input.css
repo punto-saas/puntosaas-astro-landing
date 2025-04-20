@@ -1,0 +1,33 @@
+.input {
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg, #F7F9FC);
+  color: var(--color-text);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.1rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  outline: none;
+  box-shadow: none;
+}
+.input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary), 0 2px 8px 0 rgba(63,111,238,0.08);
+  background: #fff;
+}
+.input:disabled {
+  background: #f3f4f6;
+  color: #b0b0b0;
+  cursor: not-allowed;
+}
+select.input {
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L10 12L14 8' stroke='%233F6FEE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  appearance: none;
+}
+textarea.input {
+  min-height: 3.5rem;
+  resize: vertical;
+}

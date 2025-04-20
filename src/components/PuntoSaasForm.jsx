@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/input.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -78,14 +79,15 @@ export default function PuntoSaasForm() {
   };
 
   return (
-    <form
-      className="max-w-xl mx-auto p-8 bg-white rounded-xl shadow flex flex-col gap-4"
-      onSubmit={handleSubmit(onSubmit)}
-      aria-label="Formulario de aplicación PuntoSaaS"
-    >
-      <h2 className="text-2xl font-bold mb-2 text-[var(--color-text)]">Aplica a los Desayunos con ICPs</h2>
-      <p className="mb-4 text-[var(--color-text)]/70">Completa este formulario para postular tu startup B2B SaaS.</p>
-      {alert && <div className="bg-yellow-100 text-yellow-900 px-4 py-2 rounded mb-2 text-sm">{alert}</div>}
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-white/90 border border-[var(--color-border)] rounded-2xl shadow-lg px-4 md:px-10 py-8 md:py-12 relative overflow-hidden" noValidate>
+      <div className="absolute left-0 top-0 w-full h-2 bg-[var(--color-accent)] rounded-t-2xl" />
+      {alert && (
+        <div className="mb-4 text-[var(--color-accent)] bg-[var(--color-accent)]/10 rounded p-3 text-center font-semibold">
+          {alert}
+        </div>
+      )}
+      <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[var(--color-primary)]">Aplica a los Desayunos con ICPs</h2>
+      <p className="mb-8 text-[var(--color-text)]/80 text-lg">Completa este formulario para postular tu startup B2B SaaS.</p>
       {status === "success" && (
         <div className="bg-green-100 text-green-900 px-4 py-2 rounded mb-2 text-sm">¡Gracias! Revisaremos tu info y te contactaremos.</div>
       )}
@@ -93,156 +95,156 @@ export default function PuntoSaasForm() {
         <div className="bg-red-100 text-red-900 px-4 py-2 rounded mb-2 text-sm">Hubo un error al enviar tu aplicación. Intenta de nuevo.</div>
       )}
       <div className="flex flex-col gap-2">
-        <label htmlFor="startupName" className="font-semibold text-[var(--color-text)]">Nombre de la startup *</label>
+        <label htmlFor="startupName" className="font-semibold text-[var(--color-primary)]">Nombre de la startup *</label>
         <input {...register("startupName")}
           id="startupName"
           type="text"
           placeholder="Ej.: Acme Cloud"
           aria-description="Nombre de la startup"
-          className="input"
+          className="input mb-6"
         />
-        {errors.startupName && <span className="text-red-500 text-xs">{errors.startupName.message}</span>}
+        {errors.startupName && <span className="text-[var(--color-accent)] text-xs">{errors.startupName.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="websiteOrDeck" className="font-semibold text-[var(--color-text)]">Web o enlace al deck</label>
+        <label htmlFor="websiteOrDeck" className="font-semibold text-[var(--color-primary)]">Web o enlace al deck</label>
         <input {...register("websiteOrDeck")}
           id="websiteOrDeck"
           type="url"
           placeholder="https://…"
           aria-description="Web o enlace al deck"
-          className="input"
+          className="input mb-6"
         />
-        {errors.websiteOrDeck && <span className="text-red-500 text-xs">{errors.websiteOrDeck.message}</span>}
+        {errors.websiteOrDeck && <span className="text-[var(--color-accent)] text-xs">{errors.websiteOrDeck.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="problemSolution" className="font-semibold text-[var(--color-text)]">¿Qué problema resuelven y para quién? *</label>
+        <label htmlFor="problemSolution" className="font-semibold text-[var(--color-primary)]">¿Qué problema resuelven y para quién? *</label>
         <textarea {...register("problemSolution")}
           id="problemSolution"
           maxLength={140}
           placeholder="Breve y directo"
           aria-description="¿Qué problema resuelven y para quién?"
-          className="input"
+          className="input mb-6"
         />
         <span className="text-xs text-gray-400">Máx. 140 caracteres</span>
-        {errors.problemSolution && <span className="text-red-500 text-xs">{errors.problemSolution.message}</span>}
+        {errors.problemSolution && <span className="text-[var(--color-accent)] text-xs">{errors.problemSolution.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="icpSector" className="font-semibold text-[var(--color-text)]">Sector de tu cliente ideal *</label>
+        <label htmlFor="icpSector" className="font-semibold text-[var(--color-primary)]">Sector de tu cliente ideal *</label>
         <input {...register("icpSector")}
           id="icpSector"
           type="text"
           placeholder="Banca, Retail, Logística…"
           aria-description="Sector de tu cliente ideal"
-          className="input"
+          className="input mb-6"
         />
-        {errors.icpSector && <span className="text-red-500 text-xs">{errors.icpSector.message}</span>}
+        {errors.icpSector && <span className="text-[var(--color-accent)] text-xs">{errors.icpSector.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="icpRole" className="font-semibold text-[var(--color-text)]">Cargo/área de decisión *</label>
+        <label htmlFor="icpRole" className="font-semibold text-[var(--color-primary)]">Cargo/área de decisión *</label>
         <input {...register("icpRole")}
           id="icpRole"
           type="text"
           placeholder="Gerente de Innovación"
           aria-description="Cargo/área de decisión"
-          className="input"
+          className="input mb-6"
         />
-        {errors.icpRole && <span className="text-red-500 text-xs">{errors.icpRole.message}</span>}
+        {errors.icpRole && <span className="text-[var(--color-accent)] text-xs">{errors.icpRole.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="icpSize" className="font-semibold text-[var(--color-text)]">Tamaño empresa (empleados) *</label>
+        <label htmlFor="icpSize" className="font-semibold text-[var(--color-primary)]">Tamaño empresa (empleados) *</label>
         <select {...register("icpSize")}
           id="icpSize"
           aria-description="Tamaño empresa (empleados)"
-          className="input"
+          className="input mb-6"
         >
           <option value="50-500">50-500</option>
           <option value="500-1000">500-1000</option>
           <option value="1000-5000">1000-5000</option>
           <option value=">5000">&gt;5000</option>
         </select>
-        {errors.icpSize && <span className="text-red-500 text-xs">{errors.icpSize.message}</span>}
+        {errors.icpSize && <span className="text-[var(--color-accent)] text-xs">{errors.icpSize.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="ticketAvg" className="font-semibold text-[var(--color-text)]">Ticket promedio mensual (USD) *</label>
+        <label htmlFor="ticketAvg" className="font-semibold text-[var(--color-primary)]">Ticket promedio mensual (USD) *</label>
         <input {...register("ticketAvg")}
           id="ticketAvg"
           type="number"
           min={1000}
           placeholder="1200"
           aria-description="Ticket promedio mensual"
-          className="input"
+          className="input mb-6"
         />
-        {errors.ticketAvg && <span className="text-red-500 text-xs">{errors.ticketAvg.message}</span>}
+        {errors.ticketAvg && <span className="text-[var(--color-accent)] text-xs">{errors.ticketAvg.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="traction" className="font-semibold text-[var(--color-text)]">Tracción actual *</label>
+        <label htmlFor="traction" className="font-semibold text-[var(--color-primary)]">Tracción actual *</label>
         <select {...register("traction")}
           id="traction"
           aria-description="Tracción actual"
-          className="input"
+          className="input mb-6"
         >
           <option value="Sin ventas aún">Sin ventas aún</option>
           <option value="1-5 clientes pagos">1-5 clientes pagos</option>
           <option value=">5 clientes pagos">&gt;5 clientes pagos</option>
         </select>
-        {errors.traction && <span className="text-red-500 text-xs">{errors.traction.message}</span>}
+        {errors.traction && <span className="text-[var(--color-accent)] text-xs">{errors.traction.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="mrr" className="font-semibold text-[var(--color-text)]">MRR actual (USD) *</label>
+        <label htmlFor="mrr" className="font-semibold text-[var(--color-primary)]">MRR actual (USD) *</label>
         <input {...register("mrr")}
           id="mrr"
           type="number"
           min={0}
           placeholder="8000"
           aria-description="MRR actual"
-          className="input"
+          className="input mb-6"
         />
-        {errors.mrr && <span className="text-red-500 text-xs">{errors.mrr.message}</span>}
+        {errors.mrr && <span className="text-[var(--color-accent)] text-xs">{errors.mrr.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="expectations" className="font-semibold text-[var(--color-text)]">¿Qué esperas lograr en el desayuno?</label>
+        <label htmlFor="expectations" className="font-semibold text-[var(--color-primary)]">¿Qué esperas lograr en el desayuno?</label>
         <textarea {...register("expectations")}
           id="expectations"
           maxLength={100}
           placeholder="Conseguir 3 intros a bancos medianos"
           aria-description="¿Qué esperas lograr en el desayuno?"
-          className="input"
+          className="input mb-6"
         />
         <span className="text-xs text-gray-400">Máx. 100 caracteres</span>
-        {errors.expectations && <span className="text-red-500 text-xs">{errors.expectations.message}</span>}
+        {errors.expectations && <span className="text-[var(--color-accent)] text-xs">{errors.expectations.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="contactName" className="font-semibold text-[var(--color-text)]">Nombre de la persona de contacto *</label>
+        <label htmlFor="contactName" className="font-semibold text-[var(--color-primary)]">Nombre de la persona de contacto *</label>
         <input {...register("contactName")}
           id="contactName"
           type="text"
           placeholder="Ana Torres"
           aria-description="Nombre de la persona de contacto"
-          className="input"
+          className="input mb-6"
         />
-        {errors.contactName && <span className="text-red-500 text-xs">{errors.contactName.message}</span>}
+        {errors.contactName && <span className="text-[var(--color-accent)] text-xs">{errors.contactName.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="contactEmail" className="font-semibold text-[var(--color-text)]">Email *</label>
+        <label htmlFor="contactEmail" className="font-semibold text-[var(--color-primary)]">Email *</label>
         <input {...register("contactEmail")}
           id="contactEmail"
           type="email"
           placeholder="ana@startup.com"
           aria-description="Email"
-          className="input"
+          className="input mb-6"
         />
-        {errors.contactEmail && <span className="text-red-500 text-xs">{errors.contactEmail.message}</span>}
+        {errors.contactEmail && <span className="text-[var(--color-accent)] text-xs">{errors.contactEmail.message}</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="contactWhats" className="font-semibold text-[var(--color-text)]">WhatsApp *</label>
+        <label htmlFor="contactWhats" className="font-semibold text-[var(--color-primary)]">WhatsApp *</label>
         <input {...register("contactWhats")}
           id="contactWhats"
           type="tel"
           placeholder="+51 987 654 321"
           aria-description="WhatsApp"
-          className="input"
+          className="input mb-6"
         />
-        {errors.contactWhats && <span className="text-red-500 text-xs">{errors.contactWhats.message}</span>}
+        {errors.contactWhats && <span className="text-[var(--color-accent)] text-xs">{errors.contactWhats.message}</span>}
       </div>
       <button
         type="submit"
