@@ -20,10 +20,15 @@ const team = [
   }
 ];
 ---
-<section class="py-20 fadein-section bg-[var(--color-bg-light)]">
+<section id="equipo" class="relative py-28 md:py-40 fadein-section bg-[var(--color-bg-light)]">
+  <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-screen overflow-hidden leading-none" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-20">
+      <path fill="currentColor" fill-opacity="0.10" d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,74.7C672,75,768,53,864,53.3C960,53,1056,75,1152,80C1248,85,1344,75,1392,69.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" class="text-[var(--color-primary)]"></path>
+    </svg>
+  </div>
   <div class="max-w-6xl mx-auto px-4">
     <span class="block mx-auto text-center max-w-max uppercase text-xs font-semibold tracking-widest mb-3 px-3 py-1 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)]">ORGANIZADORES</span>
-<h2 class="text-4xl md:text-5xl font-bold text-center text-[var(--color-text)] mb-3">Nuestro <span class="font-bold text-[var(--color-primary)]">Equipo</span></h2>
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-[var(--color-text)] mb-3">Nuestro <span class="font-bold text-[var(--color-primary)]">Equipo</span></h2>
     <p class="text-center text-lg text-[var(--color-text)]/70 mb-14">Conoce a los líderes detrás de PuntoSaaS.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       {team.map(member => (
